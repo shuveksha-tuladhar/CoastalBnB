@@ -1,17 +1,21 @@
 "use strict";
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable("properties", {
+    return queryInterface.createTable("Properties", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      user_id: {
+      userId: {
         type: Sequelize.INTEGER,
-        allowNull: false,
-        unique: false,
+        references: {
+          model: "Users" ,
+          key: "id"
+        },
+        onUpdate: "CASCADE",
+        onDelete: "SET NULL"
       },
       address: {
         type: Sequelize.STRING(256),
@@ -63,17 +67,17 @@ module.exports = {
         allowNull: false,
         unique: false,
       },
-      max_guest: {
+      maxGuest: {
         type: Sequelize.INTEGER,
         allowNull: false,
         unique: false,
       },
-      created_at: {
+      createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: Sequelize.fn("now")
       },
-      updated_at: {
+      updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
         defaultValue: Sequelize.fn("now"),
@@ -81,6 +85,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable("reviews");
+    return queryInterface.dropTable("Properties");
   },
 };

@@ -1,14 +1,14 @@
 "use strict";
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable("property_images", {
+    return queryInterface.createTable("PropertyImages", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      property_id: {
+      propertyId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         unique: false,
@@ -20,6 +20,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable("property_images");
+    return queryInterface.dropTable("PropertyImages");
   },
 };
