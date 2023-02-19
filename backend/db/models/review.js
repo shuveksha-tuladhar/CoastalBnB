@@ -4,7 +4,7 @@ const { Validator } = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
   const Review = sequelize.define(
-    "reviews",
+    "Review",
     {
       userId: {
         type: DataTypes.INTEGER,
@@ -23,13 +23,11 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
     },
-    {
-      underscored: true,
-    }
+    
   );
 
   Review.associate = function (models) {
-    Review.belongsTo(models.User, { foreignKey: "user_id" });
+    Review.belongsTo(models.User, { foreignKey: "userId" });
   };
   return Review;
 };

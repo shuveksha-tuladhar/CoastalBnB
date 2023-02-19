@@ -4,7 +4,7 @@ const { Validator } = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define(
-    "users",
+    "User",
     {
       username: {
         type: DataTypes.STRING,
@@ -35,9 +35,6 @@ module.exports = (sequelize, DataTypes) => {
       phoneNumber: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-          len: [30, 100],
-        },
       },
       avatarUrl: {
         type: DataTypes.STRING,
@@ -58,16 +55,15 @@ module.exports = (sequelize, DataTypes) => {
           attributes: {},
         },
       },
-      underscored: true,
+   
     }
   );
 
   User.associate = function (models) {
     // associations can be defined here
-    User.hasMany(models.Property, { foreignKey: "user_id" });
-
-    User.hasMany(models.Booking, { foreignKey: "user_id" });
-    User.hasMany(models.Review, { foreignKey: "user_id" });
+    User.hasMany(models.Property, { foreignKey: "userId" });
+    User.hasMany(models.Booking, { foreignKey: "userId" });
+    User.hasMany(models.Review, { foreignKey: "userId" });
   };
 
   User.prototype.toSafeObject = function () {

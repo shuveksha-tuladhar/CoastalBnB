@@ -4,7 +4,7 @@ const { Validator } = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
   const PropertyImage = sequelize.define(
-    "property_images",
+    "PropertyImage",
     {
       propertyId: {
         type: DataTypes.INTEGER,
@@ -15,9 +15,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
     },
-    {
-      underscored: true,
-    }
+   
   );
   return PropertyImage;
 };

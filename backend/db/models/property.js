@@ -4,7 +4,7 @@ const { Validator } = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
   const Property = sequelize.define(
-    "Properties",
+    "Property",
     {
       userId: {
         type: DataTypes.INTEGER,
@@ -55,13 +55,11 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
     },
-    {
-      underscored: true,
-    }
+    
   );
 
   Property.associate = function (models) {
-    Property.belongsTo(models.User, { foreignKey: "user_id" });
+    Property.belongsTo(models.User, { foreignKey: "userId" });
   };
   return Property;
 };

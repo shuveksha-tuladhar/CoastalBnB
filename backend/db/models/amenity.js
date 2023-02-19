@@ -4,7 +4,7 @@ const { Validator } = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
   const Amenity = sequelize.define(
-    "amenities",
+    "Amenity",
     {
       propertyId: {
         type: DataTypes.INTEGER,
@@ -16,9 +16,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       
     },
-    {
-      underscored: true,
-    }
+
   );
   return Amenity;
 };
