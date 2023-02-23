@@ -27,7 +27,8 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   Review.associate = function (models) {
-    Review.belongsTo(models.User, { foreignKey: "userId" });
+    Review.belongsTo(models.Users, { foreignKey: "userId" });
+    Review.belongsTo(models.Properties, { foreignKey: "propertyId" });
   };
   return Review;
 };
