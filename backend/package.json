@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm run start:development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:development": "nodemon -r dotenv/config ./index.js",
     "start:production": "node ./index.js",
