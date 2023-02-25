@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   PropertyImage.associate = function (models) {
-       PropertyImage.belongsToMany(models.Properties, { through: "propertyId" });
+      //  PropertyImage.belongsToMany(models.Property, { through: "propertyId" });
   };
   
   return PropertyImage;

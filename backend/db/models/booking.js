@@ -1,6 +1,7 @@
 "use strict";
 const bcrypt = require("bcryptjs");
 const { Validator } = require("sequelize");
+const Users = require("./user")
 
 module.exports = (sequelize, DataTypes) => {
   const Booking = sequelize.define(
@@ -45,9 +46,9 @@ module.exports = (sequelize, DataTypes) => {
     
   );
 
-  Booking.associate = function (models) {
-    Booking.belongsTo(models.Users, { foreignKey: "userId" });
-    Booking.belongsTo(models.Properties, { foreignKey: "propertyId" });
+  Booking.associate = function () {
+    // Booking.belongsTo(Users, { foreignKey: "userId" });
+    // Booking.belongsTo(Property, { foreignKey: "propertyId" });
   };
   return Booking;
 };
