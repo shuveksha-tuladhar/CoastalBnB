@@ -6,7 +6,6 @@ module.exports = {
       "Properties",
       [
         {
-          id: 1,
           userId: 1,
           address: "22848 E Pacific Coast Hwy",
           city: "Malibu Beach",
@@ -23,7 +22,6 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          id: 2,
           userId: 1,
           address: "711 S Myers St",
           city: "Oceanside",
