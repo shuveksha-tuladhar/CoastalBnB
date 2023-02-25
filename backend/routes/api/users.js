@@ -26,6 +26,15 @@ const validateSignup = [
   handleValidationErrors,
 ];
 
+router.get('/', async (req, res) => {
+  const user = await User.getCurrentUserById(1);
+  console.log('User:', user);
+  res.json({
+    routes: '/api/user',
+    message: 'user url hit'
+  })
+})
+
 // Sign up
 router.post(
   "/signup",
@@ -35,6 +44,7 @@ router.post(
     const user = await User.signup({ email, username, password });
 
     await jwtSign({ email, username });
+    
     return res.json({
       user,
     });
