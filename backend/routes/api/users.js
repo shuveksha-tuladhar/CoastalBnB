@@ -26,14 +26,16 @@ const validateSignup = [
   handleValidationErrors,
 ];
 
-router.get('/', async (req, res) => {
-  const user = await User.getCurrentUserById(1);
-  console.log('User:', user);
-  res.json({
-    routes: '/api/user',
-    message: 'user url hit'
-  })
-})
+const validateLogin = [
+  check('credential')
+    .exists({ checkFalsy: true })
+    .notEmpty()
+    .withMessage('Please provide a valid email or username.'),
+  check('password')
+    .exists({ checkFalsy: true })
+    .withMessage('Please provide a password.'),
+  handleValidationErrors,
+];
 
 // Sign up
 router.post(
@@ -50,5 +52,39 @@ router.post(
     });
   })
 );
+
+// Log in
+router.post(
+  '/login',
+  validateLogin,
+  asyncHandler(async (req, res, next) => {
+    const { credential, password } = req.body;
+
+    const user = await User.login({ credential, password });
+
+    if (!user) {
+      const err = new Error('Login failed');
+      err.status = 401;
+      err.title = 'Login failed';
+      err.errors = ['The provided credentials were invalid.'];
+      return next(err);
+    }
+
+    return res.json({
+      user,
+    });
+  }),
+);
+
+
+// Log out
+router.post(
+  '/logout',
+  (_req, res) => {
+   //TODO: logout validation
+    return res.json({ message: 'success' });
+  }
+);
+
 
 module.exports = router;
