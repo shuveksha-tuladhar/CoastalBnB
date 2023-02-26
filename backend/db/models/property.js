@@ -59,9 +59,9 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   Property.associate = function (models) {
-    // Property.hasMany(models.Booking, { foreignKey: "propertyId"});
+    Property.hasMany(models.Booking, { foreignKey: "propertyId"});
     // Property.hasMany(models.PropertyImage, { foreignKey: "propertyId"});
-    // Property.hasMany(models.Review, { foreignKey: "propertyId"});
+    Property.hasMany(models.Review, { foreignKey: "propertyId"});
 
     Property.belongsTo(models.User, { foreignKey: "userId" });
     // Property.belongsToMany(models.Amenity, { through: "PropertyAmenities" });
