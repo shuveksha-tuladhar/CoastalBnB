@@ -1,0 +1,31 @@
+#logo-img {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+#span-logo {
+    display: flex;
+    align-items: center;
+    /* color: #FF385C; */
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none
+}
+
+#logo {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none
+}
+
+#header-bar {
+    display: flex;
+    align-items: center;
+}
+
+.icons-header {
+    margin-left: 10px;
+}
