@@ -1,6 +1,7 @@
 #hamburger {
-    width: 20px;
+    width: 35px;
     padding-right: 10px;
+    padding-left: 10px;
 }
 
 .dropdown-menu {
@@ -9,12 +10,18 @@
     right: 30px;
 }
 
+.dropdown-container {
+     display: inline-flex;
+}
+
 .dropdown-button {
     cursor: pointer;
-    margin-top: -10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: inline-flex;
 }
 
 #profile-dropdown {
-    width: 30px;
+    width: 35px;
     border-radius: 50%;
 }

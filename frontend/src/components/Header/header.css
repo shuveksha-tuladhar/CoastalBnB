@@ -1,8 +1,7 @@
 #logo-img {
-    width: 30px;
-    height: 30px;
+    width: 30%;
     padding: 10px;
-    padding-left: 30px;
+
 }
 
 #span-logo {
@@ -24,6 +23,7 @@
 #header-bar {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .icons-header {
