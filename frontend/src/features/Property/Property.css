@@ -1,0 +1,89 @@
+.properties-index {
+    display: flex;
+}
+
+.property-index ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.index-show-list-element {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+}
+
+.property-item-div {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-right: 5px;
+}
+
+.property-item-image{
+    border-radius: 20px;
+    padding-bottom: 10px;
+    width: 20%;
+    height: 20%;
+}
+
+.property-show-page {
+    width: 40%;
+    position: relative;
+    left: 10%;
+}
+
+.title-div{
+    font-weight: 500;
+}
+
+.name {
+    color: #fc4c69; 
+    font-size: 20px;
+}
+
+.location {
+    color: #018d83;
+    font-size: 15px;
+}
+
+.bed-bath{
+    font-size: 14px;
+    color: gray;
+}
+
+.property-page-price-div{
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+}
+
+.card-price{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.price-div{
+    font-size: 17px;
+}
+
+.slash-div{
+    font-weight: 300;
+    padding-left: 3px;
+    font-size: 17px;
+}
+
+.night-div{
+    font-weight: 300;
+    padding-left: 3px;
+    font-size: 17px;
+}
+

@@ -1,7 +1,9 @@
+import Property from "../Property/Property";
+
 const Home = () => {
     return (
         <div>
-            Home
+            <Property/>
         </div>
     );
 }
