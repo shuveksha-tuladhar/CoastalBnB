@@ -1,6 +1,6 @@
 import { useState } from 'react';
 // import Navigation from '../Navigation';
-import "./dropdown.css";
+import "./Dropdown.css";
 import { useSelector } from 'react-redux';
 
 
@@ -21,6 +21,7 @@ function Dropdown( props ) {
 
     return (
         <div className='dropdown-container'>
+            
             <a href="https://github.com/shuveksha-tuladhar" target="_blank" rel="noreferrer">
                 <img className="icons-header" alt="Github" width="32" height="32" src="../../assets/github.png"/>
             </a>
