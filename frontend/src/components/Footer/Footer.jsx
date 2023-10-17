@@ -22,7 +22,6 @@ export default function Footer() {
             </a>
             <a href="https://shuveksha-tuladhar.github.io/" target="_blank" rel="noreferrer">
             <BiSolidUserRectangle size={28} className="icons-footer"/>
-                {/* <img className="icons-footer" alt="Website" width="24" height="24" src="../../assets/profile.png"/> */}
             </a>
         </div>
        </div>

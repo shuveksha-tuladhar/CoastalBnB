@@ -1,5 +1,6 @@
 .properties-index {
     display: flex;
+    justify-content: center;
 }
 
 .property-index ul {
