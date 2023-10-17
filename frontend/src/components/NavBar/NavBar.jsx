@@ -1,12 +1,12 @@
 import { Header } from "../Header/Header";
-import { Dropdown } from "../Dropdown/Dropdown";
+import { Dropdown, DropdownList } from "../Dropdown/DropdownList";
 import './Navbar.css'
 
 const NavBar = () => {
     return (
-        <div id="header-bar">
+        <div id="nav-bar">
             <Header />
-            <Dropdown />
+            <DropdownList />
         </div>
     )
 }

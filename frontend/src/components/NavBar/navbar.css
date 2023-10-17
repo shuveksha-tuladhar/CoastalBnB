@@ -1,6 +1,7 @@
-#header-bar {
-    /* position: sticky;
-    top: 0px; */
+#nav-bar {
+    display: flex;
+    position: sticky;
+    top: 0px;
     margin-top: 0px;
     padding-bottom: 8px;
     background-color: white;

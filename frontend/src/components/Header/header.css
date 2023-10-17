@@ -1,10 +1,10 @@
-#logo-img {
+.logo-img {
     width: 30%;
     padding: 10px;
 
 }
 
-#span-logo {
+.span-logo {
     display: flex;
     align-items: center;
     /* color: #FF385C; */
@@ -14,13 +14,13 @@
     text-decoration: none
 }
 
-#logo {
+.logo {
     display: flex;
     flex-direction: row;
     text-decoration: none
 }
 
-#header-bar {
+.header-bar {
     display: flex;
     align-items: center;
     width: 100%;
