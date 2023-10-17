@@ -77,11 +77,9 @@ const PropertyDetails = () => {
           <div  className="property-img-modal-container" onClick={() => setShowModal(false)} />
           <div className="property-img-modal">
               <ul>
-                <img src={property.imageUrls[0]} alt='' />
-                <img src={property.imageUrls[1]} alt='' />
-                <img src={property.imageUrls[2]} alt='' />
-                <img src={property.imageUrls[3]} alt='' />
-                <img src={property.imageUrls[4]} alt='' />
+                {property.imageUrls.map((imageUrl, index) => 
+                  <img key={index} src={imageUrl} alt='' />
+                )}
               </ul>
           </div>
         </>
