@@ -1,3 +1,4 @@
+import React, {useState} from "react";
 import AmenityContainer from "../Amenity/AmenityContainer";
 import ReservationForm from "../Reservation/ReservationForm";
 import Review from "../Review/Review";
@@ -67,10 +68,34 @@ const PropertyDetails = () => {
     },
   ]
 
+  const [showModal, setShowModal] = useState(false);
+
+  function PropertyImgModal() {
+    if (showModal) {
+      return (
+        <>
+          <div  className="property-img-modal-container" onClick={() => setShowModal(false)} />
+          <div className="property-img-modal">
+              <ul>
+                <img src={property.imageUrls[0]} alt='' />
+                <img src={property.imageUrls[1]} alt='' />
+                <img src={property.imageUrls[2]} alt='' />
+                <img src={property.imageUrls[3]} alt='' />
+                <img src={property.imageUrls[4]} alt='' />
+              </ul>
+          </div>
+        </>
+      )
+    }
+  }
+
   return (
     <>
     {property?.imageUrls && (
-      <div className="show-page-images">
+      <div>
+      <PropertyImgModal/>
+
+      <div className="show-page-images" onClick={() => setShowModal(true)}>
         <div className="property-show-idx-div">
           <img
             className="property-show-image-main"
@@ -81,10 +106,11 @@ const PropertyDetails = () => {
         <div className="show-page-small-images">
           {property.imageUrls.slice(1).map((url, index) => {
             return (
-              <img key={index}ß src={url} alt="" />
+              <img key={index} src={url} alt="" />
             );
           })}
         </div>
+      </div>
       </div>
     )}
       
