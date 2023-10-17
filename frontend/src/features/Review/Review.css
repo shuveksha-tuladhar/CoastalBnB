@@ -1,0 +1,46 @@
+.review-index-item {
+    margin-left: 2%;
+    width: 40%;
+    margin-right: 8%;
+    margin-bottom: 4%;
+}
+
+.review-info {
+
+    margin-bottom: 15px;
+}
+
+.reviewer-name {
+    margin-bottom: 0px;
+    font-weight: 600;
+    font-size: large;
+}
+
+.review-body {
+    width: 42%;
+    margin-bottom: 20px;
+    margin-left: 2%;
+}
+
+.small-review-text {
+    font-size: 14px;
+}
+
+.user-avatar {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.user-avatar img {
+    width: 100%; 
+    height: auto; 
+}
+
+
+
+
+
+
