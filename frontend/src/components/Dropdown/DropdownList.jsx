@@ -33,7 +33,7 @@ function DropdownList() {
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-          <Dropdown.Item as="button" href="#/action-1">Sign Up</Dropdown.Item>
+          <Dropdown.Item as="button" href="#/signup">Sign Up</Dropdown.Item>
           <Dropdown.Item as="button" href="#/action-2">Login</Dropdown.Item>
           <Dropdown.Item as="button" href="#/action-3">Demo Login</Dropdown.Item>
           <Dropdown.Divider />
