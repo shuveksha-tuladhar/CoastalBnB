@@ -10,7 +10,7 @@ export default function AmenityContainer(props) {
     return (
         <div>
             <h3>What this place offers</h3>
-            <div>
+            <div className="amenity-grid">
                 {amenities.map(amenity => <Amenity name={amenity.description}/>)}
                 
             </div>

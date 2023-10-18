@@ -47,7 +47,7 @@ export default function Amenity(props) {
   };
 
   return (
-    <div>
+    <div className="mb-4">
       {displayAmenity()}{name}
     </div>
   );
